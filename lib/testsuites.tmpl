@@ -10,8 +10,8 @@
           <% } else { %>
             <span class="label label-success"><i class="glyphicon glyphicon-ok"></i></span>
           <% } %>
-          <% if (suitesData[suiteIndex].failed > 0) { %><font color="red"><b><%= suitesData[suiteIndex].keyword %>:</b><%= suitesData[suiteIndex].name%></font>
-          <% } else { %><font color="green"><b><%= suitesData[suiteIndex].keyword %>:</b><%= suitesData[suiteIndex].name%></font><% } %>
+          <% if (suitesData[suiteIndex].failed > 0) { %><font color="red"><b><%= suitesData[suiteIndex].keyword %>:</b><%- suitesData[suiteIndex].name%></font>
+          <% } else { %><font color="green"><b><%= suitesData[suiteIndex].keyword %>:</b><%- suitesData[suiteIndex].name%></font><% } %>
           <span class="label-container">
             <% if (suitesData[suiteIndex].passed) { %><span class="label label-success"><%= suitesData[suiteIndex].passed %></span><% } %>
             <% if (suitesData[suiteIndex].failed) { %><span class="label label-danger"><%= suitesData[suiteIndex].failed %></span><% } %>
@@ -36,9 +36,9 @@
                           <span class="label label-danger"><i class="glyphicon glyphicon-remove"></i></span>
                         <% } %>
 
-                        <% if (suite.testcasesresults[testcaseIndex] === "Passed") { %><font color="green"><b>TestCase:</b><%= testcase %></font><% } %>
-                        <% if (suite.testcasesresults[testcaseIndex] === "Skipped") { %><font color="orange"><b>TestCase:</b><%= testcase %></font><% } %>
-                        <% if (suite.testcasesresults[testcaseIndex] === "Failed") { %><font color="red"><b>TestCase:</b><%= testcase %></font><% } %>
+                        <% if (suite.testcasesresults[testcaseIndex] === "Passed") { %><font color="green"><b>TestCase:</b><%- testcase %></font><% } %>
+                        <% if (suite.testcasesresults[testcaseIndex] === "Skipped") { %><font color="orange"><b>TestCase:</b><%- testcase %></font><% } %>
+                        <% if (suite.testcasesresults[testcaseIndex] === "Failed") { %><font color="red"><b>TestCase:</b><%- testcase %></font><% } %>
                         <span class="label-container">
                           <% if (suite.testcasesresults[testcaseIndex] === "Passed") { %><span class="label label-success" title="Passed"><%= suite.testcasesresults[testcaseIndex] %></span><% } %>
                           <% if (suite.testcasesresults[testcaseIndex] === "Skipped") { %><span class="label label-warning" title="Skipped"><%= suite.testcasesresults[testcaseIndex] %></span><% } %>
